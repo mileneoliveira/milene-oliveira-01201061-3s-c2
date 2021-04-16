@@ -19,8 +19,8 @@ public class LutadorController {
     private LutadorRepository repository;
 
     @PostMapping
-    public ResponseEntity postLutador(@RequestBody @Valid Lutadores lutador) {
-        repository.save(lutador);
+    public ResponseEntity postLutador(@RequestBody @Valid Lutadores novoLutador) {
+        repository.save(novoLutador);
         return ResponseEntity.status(201).build();
     }
 
@@ -52,4 +52,7 @@ public class LutadorController {
 
 
     }
+
+
+
 }
